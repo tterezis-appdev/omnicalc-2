@@ -9,11 +9,12 @@ class MathController < ActionController::Base
   def
   addition_results
   render({:template => "addition_results.html.erb"})
-  # @first=params.fetch("first_num")
 
-  # @second=params.fetch("second_num")
+  @first=params.fetch("first_number").to_f
 
-  # @result=@first+@second
+  @second=params.fetch("second_number").to_f
+
+  @result=@first+@second
   end
 end
 
